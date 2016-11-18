@@ -29,6 +29,8 @@ The App: As a user...
 - [ ] Write the app using ES6 and deploy using babel.
 - [ ] Deploy the app to heroku. 
 - [ ] JS Lint finds no mistakes
+
+
 ---
 ## License
 
