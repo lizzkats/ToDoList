@@ -1,0 +1,25 @@
+.addTask-input {
+  width: 100%;
+  line-height: 45px;
+  font-size: 45px;
+  opacity: 0.5;
+}
+body {
+  background-image: url("http://cdn.wallpapersafari.com/74/97/Qu3AUg.jpg");
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  font-family: 'Scope One', serif;
+  font-weight: normal;
+}
+
+.addButton {
+  width: 15%;
+  line-height: 20px;
+  font-size: 20px;
+  opacity: 0.5;
+  text-align: center;
+}

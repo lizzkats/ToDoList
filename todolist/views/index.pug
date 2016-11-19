@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div
+    link(href='https://fonts.googleapis.com/css?family=Scope+One', rel='stylesheet')
+    head
+      link(rel='stylesheet', type='text/css', href='stylesheet.css')
+  body
+    h1  ToDoList
+    input.addTask-input(type='text', maxlength='255', placeholder='Add a to-do')
+    button.addButton +
