@@ -5,7 +5,11 @@
   opacity: 0.5;
 }
 body {
-  background-image: url("http://cdn.wallpapersafari.com/74/97/Qu3AUg.jpg");
+  background: url("http://cdn.wallpapersafari.com/74/97/Qu3AUg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
@@ -17,6 +21,14 @@ h1 {
 }
 
 .addButton {
+  width: 15%;
+  line-height: 20px;
+  font-size: 20px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.deleteButton {
   width: 15%;
   line-height: 20px;
   font-size: 20px;

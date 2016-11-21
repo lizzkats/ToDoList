@@ -9,3 +9,26 @@ block content
     h1  ToDoList
     input.addTask-input(type='text', maxlength='255', placeholder='Add a to-do')
     button.addButton +
+    button.deleteButton -
+    ul
+    	li.listItems
+
+	ul.list-group
+	  each todo in todos
+	    li.list-group-item
+	      span(style='margin-right: 7px;')
+	        if( todo.complete )
+	          span.pull-left.checkbox.glyphicon.glyphicon-check(data-id=`${todo.id}`, data-complete=`${todo.complete}`, style='margin-top: 0px; font-size: 18px;')
+	        else
+	          span.pull-left.checkbox.glyphicon.glyphicon-unchecked(data-id=`${todo.id}`, data-complete=`${todo.complete}`, style='margin-top: 0px; font-size: 18px;')
+
+	      span
+	        span.title(data-id=`${todo.id}`, value=`${todo.title}`)= todo.title
+
+	      .btn-group.btn-group-xs.pull-right(role='group')
+	        button.up.btn.btn-default(type='button', data-id=`${todo.id}`)
+	          span.glyphicon.glyphicon-arrow-up(aria-hidden='true', data-id=`${todo.id}`)
+	        button.down.btn.btn-default(type='button', data-id=`${todo.id}`)
+	          span.glyphicon.glyphicon-arrow-down(aria-hidden='true', data-id=`${todo.id}`)
+	        button.delete.btn.btn-danger(type='button', data-id=`${todo.id}`) 
+	          span.glyphicon.glyphicon-ban-circle(aria-hidden='true', data-id=`${todo.id}`)
