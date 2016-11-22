@@ -10,9 +10,14 @@ block content
     form(action='/addTask', method='post')
       input.addTask-input(type='text', maxlength='255', placeholder='Add a to-do', name='title')
       button.addButton(type='submit') +
-    //- form(action='/items/delete/${items.id}', method='post')
-    //-   input(type='hidden', name='id', value= itemid)
     ul.list-group
     for task in tasks
-      li.listItems=task.title
-      a(href='/items/delete/' + task.id) DELETE
+      if task.completed
+        strike
+          li.listItems=task.title
+        a(href='/items/delete/' + task.id) DELETE
+        a(href='/items/completed/' + task.id) Mark as completed
+      else
+        li.listItems=task.title
+        a(href='/items/delete/' + task.id) DELETE
+        a(href='/items/completed/' + task.id) Mark as completed

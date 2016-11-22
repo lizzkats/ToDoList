@@ -31,7 +31,7 @@ router.get('/Items/:id', function(req, res, next) {
   })
 });
 
-router.put('/items/update/:id', function(req, res, next) {
+router.put('/update/:id', function(req, res, next) {
   const { id } = req.params
   const { description } = req.body
   console.log(req.params)
@@ -40,8 +40,17 @@ router.put('/items/update/:id', function(req, res, next) {
   })
 });
 
-function newItem() {
+router.get('/completed/:id', function(req, res, next) {
+  const id = req.params.id
+  Task.completeTask(id)
+    .then(() => res.redirect('/'))
+});
 
-}
+router.post('/uncompleted/:id', function(req, res, next) {
+  const id = req.params.id
+  Task.uncompleteTask(id).then(() => res.redirect('/'))
+});
+
+
 
 module.exports = router;
