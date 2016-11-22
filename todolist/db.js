@@ -1,5 +1,5 @@
 const pgp = require('pg-promise')()
-const db = pgp({database: 'todolists'})
+const db = pgp({database: 'todolist'})
 
 const createTask = 'INSERT INTO tasks (title) VALUES ($1) RETURNING *'
 

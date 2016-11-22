@@ -12,15 +12,10 @@ router.get('/', function(req, res, next) {
 });
 
 /* POST create new item. */
-router.post('/', function(req, res, next) {
+router.post('/addTask', function(req, res, next) {
   const title = req.body.title
-
-  Task.create(title).then(() => res.redirect('/items'))
-  $(document).ready(function(){
-  	$('.addTask').on('click', function(){
-
-  	})
-  })
+console.log(title)
+  Task.create(title).then(() => res.redirect('/'))
 });
 
 router.delete('/items/delete/:id', function(req, res, next) {
@@ -46,7 +41,7 @@ router.put('/items/update/:id', function(req, res, next) {
 });
 
 function newItem() {
-	
+
 }
 
 module.exports = router;
