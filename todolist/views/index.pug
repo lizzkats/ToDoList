@@ -6,13 +6,13 @@ block content
     head
       link(rel='stylesheet', type='text/css', href='stylesheet.css')
   body
-    script(src='./addButton.js')
     h1  ToDoList
     form(action='/addTask', method='post')
       input.addTask-input(type='text', maxlength='255', placeholder='Add a to-do', name='title')
       button.addButton(type='submit') +
-      button.deleteButton -
+    //- form(action='/items/delete/${items.id}', method='post')
+    //-   input(type='hidden', name='id', value= itemid)
     ul.list-group
-      for task in tasks
-
-        li.listItems= task.title
+    for task in tasks
+      li.listItems=task.title
+      a(href='/items/delete/' + task.id) DELETE
