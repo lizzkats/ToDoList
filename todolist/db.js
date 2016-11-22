@@ -32,7 +32,7 @@ const Task = {
   uncompleteTask: (task_id) => {
     return db.none( uncompleteTask, [task_id] )
   },
-  delete: id => db.any( deleteTask, [id] )
+  delete: id => db.oneOrNone( deleteTask, [id] )
 }
 
 const Orders = {

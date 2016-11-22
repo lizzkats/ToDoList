@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Task = require('../db');
+var {Task} = require('../db');
 var Orders = require('../db');
 
 /* GET items list page. */
@@ -18,9 +18,9 @@ console.log(title)
   Task.create(title).then(() => res.redirect('/'))
 });
 
-router.delete('/items/delete/:id', function(req, res, next) {
+router.get('/delete/:id', function(req, res, next) {
   const id = req.params.id
-  Task.delete(id).then(() => res.redirect('/items'))
+  Task.delete(id).then(() => res.redirect('/'))
 });
 
 router.get('/Items/:id', function(req, res, next) {
