@@ -19,12 +19,8 @@ The App: As a user...
 - [x] I can create to do list items.
 - [x] I can delete unwanted to do list items.
 - [x] I can check items off as completed.
-<<<<<<< HEAD
 
-## Additional Specs:
-=======
 #### Additional Specs:
->>>>>>> b2979bd3fc08e0e003cc270fe4ab9504b229b664
 - [x] Create the back end using node and express.
 - [x] Create a database of to do list items.
 - [x] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master)
