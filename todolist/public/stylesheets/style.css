@@ -29,7 +29,28 @@ h1 {
 }
 
 .deleteButton {
-  width: 15%;
+  width: 5%;
+  line-height: 20px;
+  font-size: 20px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.listItems {
+  list-style: none;
+  font-size: 30px;
+  color:white;
+  opacity: 0.8;
+  font-family: 'Scope One', serif;
+}
+
+a {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  width: 5%;
   line-height: 20px;
   font-size: 20px;
   opacity: 0.5;

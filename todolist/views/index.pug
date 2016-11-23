@@ -15,9 +15,9 @@ block content
       if task.completed
         strike
           li.listItems=task.title
-        a(href='/items/delete/' + task.id) DELETE
-        a(href='/items/completed/' + task.id) Mark as completed
+        a(href='/items/delete/' + task.id) -
+        a(href='/items/completed/' + task.id) Complete
       else
         li.listItems=task.title
-        a(href='/items/delete/' + task.id) DELETE
-        a(href='/items/completed/' + task.id) Mark as completed
+        a(href='/items/delete/' + task.id) -
+        a(href='/items/completed/' + task.id) Complete
