@@ -1,15 +1,7 @@
 # To Do List
 ## Description
 
-Complete a to do list app deployed to heroku.
-## Context
-
-Create a full stack to do list web app and make tutorials about what your learn.
-Goals
-- Learn how front end and back end connect.
-- Learn how to dissect a new problem/challenge.
-- Go through the whole process of creating and deploying a working app in a week.
-- Level the project correctly into stretch zone (Goldilocks Status: Achievement Unlocked)
+Simple To Do List app. Created with Node & Express.
 
 ## Specifications
 
